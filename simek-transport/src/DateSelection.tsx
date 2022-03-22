@@ -5,7 +5,7 @@ const DateSelection = () => {
 	//const isDateOpen: boolean;
 	return (
 		<div>
-			<DateSelectionSideBtn test="koko"/>
+			<DateSelectionSideBtn/>
 			<DateSelectionTable/>
 		</div>
 	);

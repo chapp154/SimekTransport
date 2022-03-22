@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 
-const DateSelectionSideBtn = (props: object) => {
+const DateSelectionSideBtn = () => {
 	let [tableVisible, setTableVisible] = useState(false);
 	const handleClick = (): void => {
-		console.log(props.test)
 	};
 
 	return (

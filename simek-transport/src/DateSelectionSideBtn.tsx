@@ -1,7 +1,5 @@
-import React, { useState } from 'react';
 
 const DateSelectionSideBtn = () => {
-	let [tableVisible, setTableVisible] = useState(false);
 	const handleClick = (): void => {
 	};
 

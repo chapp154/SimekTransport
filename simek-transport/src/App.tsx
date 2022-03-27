@@ -1,6 +1,6 @@
 import DateSelection from "./DateSelection";
 
-function App() {
+const App: React.FC = () => {
   return (
 		<DateSelection/>
 	);

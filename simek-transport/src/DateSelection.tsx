@@ -2,19 +2,12 @@ import DateSelectionSideBtn from "./DateSelectionSideBtn";
 import DateSelectionTable from "./DateSelectionTable";
 import React, { useState } from 'react';
 
-
-// Trying to find out how to pass props to component
-interface Props {
-	tableVisible: boolean;
-	setTableVisible: boolean;
-}
-
-const DateSelection = ({tableVisible, setTableVisible} : Props) => {
-	[tableVisible, setTableVisible] = useState<boolean>(false);
-
+const DateSelection: React.FC = () => {
+	const [tableVisible, setTableVisible] = useState(true);
 	return (
 		<div>
-			<DateSelectionSideBtn tableVisible/>
+			<p>{tableVisible}</p>
+			<DateSelectionSideBtn tableVisible={tableVisible} setTableVisible={setTableVisible}/>
 			{tableVisible && <DateSelectionTable/>}
 		</div>
 	);

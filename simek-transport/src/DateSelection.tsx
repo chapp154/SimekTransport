@@ -2,7 +2,7 @@ import DateSelectionSideBtn from "./DateSelectionSideBtn";
 import DateSelectionTable from "./DateSelectionTable";
 import React, { useState } from 'react';
 
-const DateSelection: React.FC = () => {
+const DateSelection = () => {
 	const [tableVisible, setTableVisible] = useState(true);
 	return (
 		<div>

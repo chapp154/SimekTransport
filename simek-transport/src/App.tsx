@@ -1,6 +1,7 @@
+import React from "react";
 import DateSelection from "./DateSelection";
 
-const App: React.FC = () => {
+const App = () => {
   return (
 		<DateSelection/>
 	);

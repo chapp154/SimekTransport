@@ -1,15 +1,17 @@
+
 type Props = {
 	tableVisible: boolean,
-	setTableVisible: () => void, 
+	setTableVisible: (val: boolean) => void, 
 }
 
-const DateSelectionSideBtn: React.FC<Props> = (tableVisible, setTableVisible) => {
+const DateSelectionSideBtn = ({tableVisible, setTableVisible}: Props) => {
 	const handleClick = (): void => {
+		setTableVisible(!tableVisible);
 	};
 
 	return (
 		<div className="date-button">
-			<p>Datum</p>
+			<button onClick={handleClick}>Datum</button>
 		</div>
 	);
 };

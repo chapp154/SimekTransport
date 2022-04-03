@@ -1,11 +1,12 @@
-import DateSelectionSideBtn from "./DateSelectionSideBtn";
-import DateSelectionTable from "./DateSelectionTable";
+import DateSelectionSideBtn from "./SideBtn";
+import DateSelectionTable from "./Table";
 import React, { useState } from 'react';
 
 const DateSelection = () => {
-	const [tableVisible, setTableVisible] = useState(true);
+	const [tableVisible, setTableVisible] = useState(false);
+	
 	return (
-		<div>
+		<div className="date">
 			<p>{tableVisible}</p>
 			<DateSelectionSideBtn tableVisible={tableVisible} setTableVisible={setTableVisible}/>
 			{tableVisible && <DateSelectionTable/>}

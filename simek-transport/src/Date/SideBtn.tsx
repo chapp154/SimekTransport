@@ -1,3 +1,4 @@
+import React from "react";
 
 type Props = {
 	tableVisible: boolean,
@@ -8,9 +9,9 @@ const DateSelectionSideBtn = ({tableVisible, setTableVisible}: Props) => {
 	const handleClick = (): void => {
 		setTableVisible(!tableVisible);
 	};
-
+	
 	return (
-		<div className="date-button">
+		<div className="date__button">
 			<button onClick={handleClick}>Datum</button>
 		</div>
 	);

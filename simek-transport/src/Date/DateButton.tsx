@@ -5,7 +5,7 @@ type Props = {
 	setTableVisible: (val: boolean) => void, 
 }
 
-const DateSelectionSideBtn = ({tableVisible, setTableVisible}: Props) => {
+const DateButton = ({tableVisible, setTableVisible}: Props) => {
 	const handleClick = (): void => {
 		setTableVisible(!tableVisible);
 	};
@@ -17,4 +17,4 @@ const DateSelectionSideBtn = ({tableVisible, setTableVisible}: Props) => {
 	);
 };
 
-export default DateSelectionSideBtn;
+export default DateButton;

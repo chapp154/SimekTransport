@@ -1,5 +1,5 @@
 import React from "react";
-import DateSelection from "./Date/DateSelection";
+import DateSelection from "./Date/Date";
 
 const App = () => {
  

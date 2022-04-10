@@ -7,7 +7,6 @@ const DateSelection = () => {
 	
 	return (
 		<div className="date">
-			<p>{tableVisible}</p>
 			<DateButton tableVisible={tableVisible} setTableVisible={setTableVisible}/>
 			{tableVisible && <DateTable/>}
 		</div>

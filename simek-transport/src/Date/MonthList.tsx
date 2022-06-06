@@ -1,11 +1,11 @@
-import React, { ReactNode, useState } from 'react'
+import React, { ReactNode, useState, useEffect } from 'react'
 
-type Props = {
+type Props<T> = {
 	calendarDays: number[],
-	setCalendarDays: (val: number[]) => void,
+	setCalendarDays: (val: T) => void,
 }
 
-export default function MonthList({calendarDays, setCalendarDays}: Props) {
+export default function MonthList({calendarDays, setCalendarDays}: Props<number[]>) {
 	type DateElements = () => ReactNode;
 
 	const months: string[] = ["Leden", "Únor", "Březen", "Duben", "Květen", "Červen", "Červenec", "Srpen", "Září", "Říjen", "Listopad", "Prosinec"];
@@ -24,14 +24,13 @@ export default function MonthList({calendarDays, setCalendarDays}: Props) {
 
 		return days;
 	};
-	setCalendarDays([1,2]);
-
 
 	function handleMonthChange(e: React.MouseEvent) {
 		const element = e.target as HTMLElement;
 		const dataKey = Number(element.attributes.getNamedItem("data-key")?.nodeValue);
 
 		setCurrentMonth(dataKey);
+		setCalendarDays(getDays());
 		console.log(dataKey);
 	}
 
